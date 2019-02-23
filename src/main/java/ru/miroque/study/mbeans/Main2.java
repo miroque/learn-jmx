@@ -1,12 +1,11 @@
 package ru.miroque.study.mbeans;
 
 import java.lang.management.ManagementFactory;
-import java.util.concurrent.TimeUnit;
 
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
 
-public class Main {
+public class Main2 {
 	public static void main(String[] args) throws Exception {
 
 		MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
@@ -14,12 +13,7 @@ public class Main {
 		Hello mbean = new Hello();
 		mbs.registerMBean(mbean, name);
 
-		while (true) {
-			System.out.println("::number: "+ mbean.getNumber());
-			System.out.println("::number*2: "+ mbean.getNumber()*2);
-			TimeUnit.SECONDS.sleep(2);
-		}
-		
-		
+		System.out.println("Waiting forever...");
+		Thread.sleep(Long.MAX_VALUE);
 	}
 }

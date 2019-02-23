@@ -4,6 +4,15 @@ public class Hello implements HelloMBean {
 	private final String     name               = "Reginald";
 	private int              cacheSize          = DEFAULT_CACHE_SIZE;
 	private static final int DEFAULT_CACHE_SIZE = 200;
+	private int number = 3;
+	
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
 
 	public void sayHello() {
 		System.out.println("hello, world");

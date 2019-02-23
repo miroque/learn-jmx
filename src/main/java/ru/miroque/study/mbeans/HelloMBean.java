@@ -1,6 +1,9 @@
 package ru.miroque.study.mbeans;
 
 public interface HelloMBean {
+	int getNumber();
+	
+	void setNumber(int n);
 
 	public void sayHello();
 
